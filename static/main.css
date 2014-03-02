@@ -1,0 +1,200 @@
+html, body{
+    margin:0;
+    padding:0;
+    height:100%;
+    
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+#wrapper {
+	background:#fff;
+    min-height:100%;
+    position:relative;
+    width: 800px;
+    margin: 0px auto;
+    color: #333;
+    /*margin-top: -20px;*/
+}
+#content {
+    padding: 10px 0px 80px 0px;
+	font-size: 0.9em;
+		background:#fff;
+}
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+	margin: 10px 0px 0px 0px;
+}
+#content blockquote {
+	border:1px solid #ccc;
+	border-left: 5px solid #ccc;
+	background:#eee;
+	
+	padding:10px;
+}
+.login-area {
+    font-size: 0.8em;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+
+    padding:2px 10px;
+    border:1px solid #ccc;
+}
+.securedpage {
+    border:1px solid #f00;
+    background:#fcc;
+
+}
+.footer-area {
+	font-size: 0.8em;
+	color: gray;
+	background:#fff;
+	padding: 2px 0px;
+	border-top:1px solid #ccc;
+	
+	position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:50px;
+    text-align: right;
+}
+
+.login-link {
+    color: gray;
+    text-decoration: none;
+}
+.login-link:visited {
+    color: gray;
+}
+.login-link:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
+
+label + label {
+    margin-top: 20px;
+}
+
+input[type=text], input[type=password] {
+    width: 500px;
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+}
+
+textarea {
+  width: 100%;
+  height: 700px;
+  font-size: 17px;
+  font-family: monospace;
+}
+
+input[type=submit] {
+  font-size: 20px;
+}
+
+.main-title {
+    display: block;
+    color: #222;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.post + .post {
+    margin-top: 15px;
+}
+
+.post-heading {
+    position: relative;
+    border-bottom: 3px solid #666;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.post-date {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #999;
+
+}
+
+.post-content {
+    margin-top: 5px;
+}
+
+.qtime {
+    text-align: right;
+    font-size: 0.9em;
+}
+table#history {
+    margin-top:60px;
+    width:100%;
+    font-size:12px;
+}
+._history_date {
+    width:100px;
+    padding:1px 3px;
+}
+._history_links {
+    width:80px;
+    padding:1px 3px;
+}
+._history_content {
+    padding:1px 3px;
+}
+._history_name {
+    padding:1px 3px;
+	width:80px;
+	text-align: center;
+}
+tr {
+    background:#fff;
+}
+tr.alt {
+    background:#eee;
+}
+tr th {
+	background:#333;
+	color:white;
+}
+
+.label {text-align: right}
+      .error {color: red}
+      
+      a.no-decoration {
+        text-decoration:underline;
+        color:inherit;
+      }
+#qrc {
+	position:absolute;
+	bottom:0;
+	left:0;
+	background:#fff;
+	color:#333;
+	font-size:0.7em;
+	padding:0;
+	margin:5px;
+}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Page creation/edit history for {{uname}}</h2>
+<a class="login-link" href="/_user">&lt;- Return to userlist</a>
+<table id="history">
+<tr>
+    <th>Created on</th>
+    <th>Page Title</th>
+    <th>Content</th>
+    <th>Control</th>
+</tr>
+{% for u in updb %}
+        <tr class="{{loop.cycle('','alt')}}">
+            <td class="_history_date">{{u.created.strftime('%d-%m-%Y %H:%m')}}</td>
+            <td class="_history_name">{{u.name}}</td>
+            <td class="_history_content">{{u.content[:100]}}</td>
+            <td class="_history_name"><a class="login-link" href="{{u.name}}?v={{u.key().id()}}">view</a> | <a class="login-link" href="/_edit{{u.name}}?v={{u.key().id()}}">edit</a></td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

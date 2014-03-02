@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Protected Page: {{pagename}}</h2>
+    <form method="post">
+    	<label>This page <em>{{pagename}}</em> is password protected.<br>
+    		Enter the password below or <a href="/">click here to back off slowly</a>.
+            <input type="password" name="pagepw"></label>
+      <div class="error">{{errormsg}}</div>
+      <input type="submit">
+    </form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table>
+{% for p in pdb %}
+<tr>
+    <td>{{p.created.strftime('%d-%m-%Y %h:%m')}}</td>
+    <td>{{p.content}}</td>
+    <td><a href="{{title}}">view</a> | <a href="/edit{{title}}">edit</a></td>
+{% endfor %}
+</table>
+{% endblock %}

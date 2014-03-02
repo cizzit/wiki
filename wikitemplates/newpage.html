@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>new page: {{pagename}}</h2>
+
+    <form method="post">
+            <textarea name="content">{{content}}</textarea>
+            {% if isnewpage==True %}
+            <p><strong>Password protect page</strong><br>
+            Entering a password below prevents this page from being viewed without entering the password.<br>
+        	Note: This password cannot be removed or reset (at present).</p>
+            <label>Enter page password <input type="password" name="pagepw"><br>Leave blank if you don't want this page protected.</label>{% endif %}
+      <div class="error">{{errormsg}}</div>
+
+      <input type="submit">
+    </form>
+{% endblock %}

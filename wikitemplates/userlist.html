@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Registered Users</h2>
+<p>Click the username to see a list of pages that user has created/edited.</p>
+{% for u in userlist %}
+<a class="login-link" href="/_user?u={{u.name}}">{{u.name}}</a><br>
+{% endfor %}
+
+
+{% endblock %}

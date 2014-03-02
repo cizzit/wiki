@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Edit history for {{title}}</h2>
+<table id="history">
+    <tr>
+        <th>Saved</th>
+        <th>Content</th>
+        <th>Author</th>
+        <th>Controls</th>
+    </tr>
+{% for page in pdb %}
+        <tr class="{{loop.cycle('','alt')}}">
+            <td class="_history_date">{{page.created.strftime('%d-%m-%Y %H:%m')}}</td>
+            <td class="_history_content">{{page.content[:100]}}</td>
+            <td class="_history_author">{% if page.author == None %}&nbsp;{% else %}<a class="login-link" href="/_user?u={{page.author}}">{{page.author}}</a>{% endif %}</td>
+            <td class="_history_links"><a class="login-link" href="{{title}}?v={{page.key().id()}}">view</a> | <a class="login-link" href="/_edit{{title}}?v={{page.key().id()}}">edit</a></td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
